@@ -16,6 +16,10 @@ tar -xvf ${FILENAME}.tar.gz
 echo "==> Building $FILENAME"
 cd ${FILENAME}
 make
+make install
 
 echo "==> Moving $FILENAME binary"
-cp /${FILENAME}/build/mergerfs /output
+mkdir -p /output/usr/local/bin
+mkdir -p /output/usr/local/sbin
+cp /usr/local/bin/{mergerfs,mergerfs-fusermount} /output/usr/local/bin
+cp /usr/local/sbin/mount.mergerfs /output/usr/local/sbin
