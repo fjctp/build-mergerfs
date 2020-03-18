@@ -10,5 +10,4 @@ docker run -it --rm -v $PWD:/output -e VERSION=2.29.0 fjctp/build-mergerfs
 2. Copy binary to folders and setup symbolic link for `mount`
 ```
 sudo cp -r ./usr /
-sudo ln -s /usr/local/sbin/mount.mergerfs /sbin/mount.mergerfs
 ```
